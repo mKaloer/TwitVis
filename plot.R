@@ -5,7 +5,7 @@ library(maps)
 world<-map_data('world')
 
 # Generates plot of the locations on a world map.
-plotworld <- function(df) {
+plotworld <- function(df, point_size = 0.1, point_alpha = 0.1) {
     # Set theme.
     theme_opts <- list(theme(panel.background = element_blank(),
                              panel.grid.major = element_blank(),
@@ -21,6 +21,6 @@ plotworld <- function(df) {
         theme_opts +
         xlab("") + ylab("") + 
         geom_point(data=df, aes(lat,long),
-            size=0.1, alpha=0.1, colour="white")
+            size=point_size, alpha=point_alpha, colour="white")
     return(p)
 }
