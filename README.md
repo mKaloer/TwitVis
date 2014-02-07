@@ -13,7 +13,7 @@ For plotting historical tweets about 'olympics' to the output directory `plots`:
 `> ruby twit_vis.rb -h -t olympics -o plots`
 
 
-## Generating Video
+### Generating Video
 For generating a video, use the `mkvid.sh` shell script with the output dir:
 `> ./mkvid.sh plots`
 An optional frame rate can be given as the second argument (here a frame rate of 10):
