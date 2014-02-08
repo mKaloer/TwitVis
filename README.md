@@ -3,7 +3,14 @@
 
 TwitVis is a tool for visualizing locations of tweets about a specific topic over time. The output is a number of images which can be used standalone or combined using `ffmpeg` to show the development as a video.
 
+## Dependencies
+ffmpeg, R and Ruby.
+
 ## Usage
+### Initialization
+Before monitoring, an Rserve server must be started. This can be done using the simple `server.R` file:
+`> R --vanilla -f 'server.R'`
+
 ### Real-Time Monitoring
 For plotting tweets about 'sochi' and 'olympics' to the output directory `plots`:
 
@@ -24,5 +31,5 @@ An optional frame rate can be given as the second argument (here a frame rate of
 
 `> ./mkvid.sh plots 10`
 
-Example:
+Example (single output frame):
 ![Example output](example.png)
